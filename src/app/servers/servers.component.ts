@@ -7,6 +7,9 @@ styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
 
+  allowNewServer = false;
+
+
   constructor() { }
 
   ngOnInit(): void {
