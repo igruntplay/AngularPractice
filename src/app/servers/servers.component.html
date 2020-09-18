@@ -1,3 +1,7 @@
+<label>Server</label>
+<!-- Ejecuta funcion del TS en el input -->
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<p>{{ serverName }}</p>
 <button type="button" [disabled]="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">
     New server
 </button>
