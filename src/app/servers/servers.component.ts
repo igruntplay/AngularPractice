@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created.'; 
   serverName = 'TestServer';
+  serverCreated = false;
 
   constructor() {
     setTimeout(() => {
@@ -22,7 +23,8 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer(){
-    this.serverCreationStatus = 'Server was created.'
+    this.serverCreated = true;
+    this.serverCreationStatus = 'Server was created, the name is: ' + this.serverName;
   }
 
   // Toma el value del input y lo almacena en una variable
