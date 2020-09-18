@@ -7,6 +7,8 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { SucComponentComponent } from './suc-component/suc-component.component';
 import { WarnComponentComponent } from './warn-component/warn-component.component';
+import { FormsModule } from '@angular/forms'; 
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { WarnComponentComponent } from './warn-component/warn-component.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
