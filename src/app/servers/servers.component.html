@@ -2,19 +2,27 @@
 <!-- Ejecuta funcion del TS en el input 
 <input type="text" class="form-control" (input)="onUpdateServerName($event)">
 -->
-<input type="text" class="form-control" [(ngModel)]="serverName">
+<input type="text" class="form-control" [(ngModel)]="serverName" />
 <p>{{ serverName }}</p>
-<button type="button" [disabled]="!allowNewServer" class="btn btn-primary" (click)="onCreateServer()">
-    New server
+<button
+  type="button"
+  [disabled]="!allowNewServer"
+  class="btn btn-primary"
+  (click)="onCreateServer()"
+>
+  New server
 </button>
 <!--
 <p>{{serverCreationStatus}}</p>
 <h2>servers component</h2>
 -->
-<p *ngIf="serverCreated; else noServer">Server was created, the name is: {{ serverName }}</p>
+<p *ngIf="serverCreated; else noServer">
+  Server was created, the name is: {{ serverName }}
+</p>
 <ng-template #noServer>
-    <p>No server was created.</p>
+  <p>No server was created.</p>
 </ng-template>
 <app-server>
-    <i>Hello world!</i>
+  <i>Hello world!</i>
 </app-server>
+<app-server *ngFor="let server of servers"></app-server>
